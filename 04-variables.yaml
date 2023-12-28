@@ -1,9 +1,9 @@
 - name : PLAYBOOK variable
   hosts : localhost
   vars :
-    course : "Devops"
-    Trainer : "shiva"
-    Duration : "110hrs"
+    course : "shellscript"
+    Trainer : "chandu"
+    Duration : "120hrs"
   tasks:
   - name : check varaiable
     ansible.builtin.debug:
