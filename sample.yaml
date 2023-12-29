@@ -1,16 +1,13 @@
-- name : PLAY-1
-  hosts : localhost
-  tasks :
-  - name : Play-1 and task-1
-    ansible.builtin.debug:
-      msg : "Hello from PLAY-1 and task-1"
 
-- name : Play-2
+- name : variables
   hosts : localhost
+  vars :
+    course : " devops"
+    trainer : "chandu"
+    duration : "110hrs"
   tasks :
-   - name : PLAY-2 and task-2
-     ansible.builtin.debug:
-       msg : "Hello from PLAY CHILDREM-2 and task-2"
-
+    - name : check variables
+      ansible.builtin.debug: 
+        msg : "Iam lesrning {{course}} from trainer {{trainer}} duration {{duration}}"
 
 
